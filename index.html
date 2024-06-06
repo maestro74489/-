@@ -1,0 +1,71 @@
+<html lang="ru">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="sub-container">
+          <div class="total-amount-container">
+            <h3>Бюджет</h3>
+            <p class="hide error" id="budget-error">
+              Бюджет не может быть отрицательным или равным 0
+            </p>
+            <input
+              type="number"
+              id="total-amount"
+              placeholder="Введите сумму"
+            />
+            <button class="submit" id="total-amount-button">Сформировать бюджет</button>
+          </div>
+          <div class="user-amount-container">
+            <h3>Расходы</h3>
+            <p class="hide error" id="product-title-error">
+              Проверте правльность заполнения ячеек
+            </p>
+            <input
+              type="text"
+              class="product-title"
+              id="product-title"
+              placeholder="Название"
+            />
+            <input
+              type="number"
+              id="user-amount"
+              placeholder="Цена"
+            />
+            <button class="submit" id="check-amount">Добавить</button>
+          </div>
+        </div>
+        <div class="output-container flex-space">
+          <div>
+            <p>Бюджет (исходный)</p>
+            <span id="amount">0</span>
+          </div>
+          <div>
+            <p>Расходы</p>
+            <span id="expenditure-value">0</span>
+          </div>
+          <div>
+            <p>Баланс</p>
+            <span id="balance-amount">0</span>
+          </div>
+        </div>
+      </div>
+      <div class="list">
+        <h3>Список расходов:</h3>
+        <div class="list-container" id="list"></div>
+      </div>
+    </div>
+    <div class="export-container">
+      <button id="export-btn">Экспортировать</button>
+    </div>    
+    <script src="script.js"></script>
+  </body>
+</html>
